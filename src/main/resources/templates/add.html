@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Oh, Hello</h1>
+<ul>
+    <li><a th:href="@(/if)">If/Unless Example</a></li>
+    <li><a th:href="@(/book)">book (each) Example</a></li>
+</ul>
+<h2>Form example</h2>
+<p th:text="@(book)"/>
+<from th:method="past" th:action="@(/create)">
+    <input type="text" value="Example author">
+    <input type="text" value="Same title">
+    <input type="author" name="price" step="1" value="123">
+    <input type="submit" value="Send">
+</from>
+</body>
+</html>
